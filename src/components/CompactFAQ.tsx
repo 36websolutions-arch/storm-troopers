@@ -10,27 +10,27 @@ const CompactFAQ = () => {
     {
       question: "How long does a claim take from start to finish?",
       answer:
-        "Looking for reliable siding installation? We install premium siding that's built for durability, insulation, and long-lasting curb appeal. Our process includes removing old siding, repairing structural issues, and installing new materials with precision for a flawless finish that protects your home year-round.",
+        "Most roofing insurance claims take 2–6 weeks from inspection to final installation. Timing depends on your insurance company, adjuster availability, and how busy the storm season is.",
     },
     {
       question: "What is the preferred Shingle we use?",
       answer:
-        "We use premium architectural shingles from leading manufacturers that offer superior durability, wind resistance, and long-lasting protection for your home.",
+        "Most homeowners prefer asphalt shingles because they give you the best balance of price, durability, and curb appeal. They look great, handle tough weather, and don’t require much upkeep — making them a practical, worry-free choice for families.",
     },
     {
       question: "How do you find a roofing contractor you can trust?",
       answer:
-        "Look for licensed, insured contractors with strong local references, proper certifications, and transparent pricing. Check reviews and ask for proof of insurance and warranties.",
+        "The best way to find a roofer you can trust is to look for honesty, transparency, and real customer feedback. Make sure they’re licensed, insured, and willing to show past projects. A trustworthy contractor explains everything clearly and never pressures you",
     },
     {
       question: "Can you repair storm damage without replacing the whole roof?",
       answer:
-        "In many cases, yes. We can often repair localized storm damage by replacing affected shingles and addressing specific issues without requiring a full roof replacement.",
+        "Yes. If the damage is isolated, we can repair only the affected shingles or sections. However, if the storm damage is widespread or affects the roof’s structure, a full replacement may be required for safety and insurance approval.",
     },
     {
       question: "How fast should I act after a storm?",
       answer:
-        "Act quickly to prevent further damage. Contact us within 24-48 hours for an inspection. Temporary repairs may be needed to protect your home from water intrusion.",
+        " As quickly as possible. Storm damage spreads fast and insurance deadlines don’t wait. We can inspect your roof within 24 hours, document everything, and help you secure your claim before problems get worse.",
     },
   ];
 

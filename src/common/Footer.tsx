@@ -13,7 +13,32 @@ export default function Footer() {
     "/images/fot3.png",
   ];
 
-  const mainLinks = ["Home", "Services", "Gallery", "About Us", "Contact"];
+  const mainLinks = [
+    {
+      href: "#home",
+      label: "Home",
+    },
+    {
+      href: "#about",
+      label: "About Us",
+    },
+    {
+      href: "#services",
+      label: "Services",
+    },
+    {
+      href: "#sliding",
+      label: "Siding Installation",
+    },
+    {
+      href: "#damage",
+      label: "Storm Damage",
+    },
+    {
+      href: "#faq",
+      label: "FAQ",
+    },
+  ];
 
   const socialLinks = [
     {
@@ -78,9 +103,9 @@ export default function Footer() {
                   <li key={index} className="flex items-center group">
                     <span className="w-2 h-2 bg-white rounded-full mr-3 lg:mr-4 group-hover:scale-150 transition-transform duration-200 shrink-0"></span>
                     <Link
-                      href="/"
+                      href={link.href}
                       className="text-white font-light hover:text-gray-200 font-sans text-base lg:text-lg transition-all duration-200 hover:translate-x-2 transform">
-                      {link}
+                      {link.label}
                     </Link>
                   </li>
                 ))}
