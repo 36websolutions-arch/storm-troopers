@@ -28,10 +28,10 @@ export default function WhyAddressRoof() {
 
   return (
     <div className="py-8 sm:py-12 lg:py-16 bg-[#F0E3E3]">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
           <div className="order-2 lg:order-1">
-            <div className="relative w-full max-w-2xl mx-auto">
+            <div className="relative w-full  mx-auto">
               <div className="aspect-[4/5] sm:aspect-[3/4] lg:aspect-[534/628] relative overflow-hidden shadow-xl">
                 <Image
                   src="/images/whyimage.png"
@@ -53,15 +53,14 @@ export default function WhyAddressRoof() {
 
               <p className="text-base sm:text-lg lg:text-xl text-heading mb-6 leading-relaxed font-sans">
                 Waiting to fix your roof can turn a small issue into a
-                full-blown crisis. Here's why early intervention is essential:
+                full-blown crisis. Here&apos;s why early intervention is essential:
               </p>
 
               <div className="space-y-2 mb-4">
                 {benefits.map((benefit, index) => (
                   <div
                     key={index}
-                    className="flex items-center justify-center gap-3 sm:gap-4 lg:gap-5 group hover:bg-white/50 transition-colors duration-200 rounded-lg p-2 sm:p-3"
-                  >
+                    className="flex items-center justify-center gap-3 sm:gap-4 lg:gap-5 group hover:bg-white/50 transition-colors duration-200 rounded-lg p-2 sm:p-3">
                     <div className="shrink-0 mt-0.5 sm:mt-1">
                       <FaCheckSquare className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-heading group-hover:scale-110 transition-transform duration-200" />
                     </div>
