@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Navbar from "../common/Navbar";
 import Link from "next/link";
@@ -11,6 +11,48 @@ import InputField from "../common/InputField";
 const HERO_IMG = "/images/hero.png";
 
 export default function Hero() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    zip: "",
+    service: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const handleChange = (e: any) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    setLoading(true);
+    setMessage("");
+
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setMessage("Message sent successfully!");
+        setFormData({ name: "", email: "", phone: "", zip: "", service: "" });
+      } else {
+        setMessage("Something went wrong.");
+      }
+    } catch (error) {
+      setMessage("Error sending email.");
+    }
+
+    setLoading(false);
+  };
   return (
     <section className="relative w-full min-h-[520px] md:h-[600px] lg:h-[837px] overflow-hidden">
       {/* Navbar */}
@@ -65,7 +107,7 @@ export default function Hero() {
             </div>
 
             {/* Right Form Box */}
-            <div className="flex justify-center pt-10 sm:pt-0">
+            {/* <div className="flex justify-center pt-10 sm:pt-0">
               <div className="bg-primary p-8 sm:p-10 rounded-md w-full max-w-[500px]">
                 <h4 className="text-white text-[20px] sm:text-[22px] font-sans font-extrabold">
                   GET A FREE ESTIMATE & CONSULTATION.
@@ -86,6 +128,64 @@ export default function Hero() {
                     </button>
                   </div>
                 </form>
+              </div>
+            </div> */}
+            <div className="flex justify-center pt-10 sm:pt-0">
+              <div className="bg-primary p-8 sm:p-10 rounded-md w-full max-w-[500px]">
+                <h4 className="text-white text-[20px] sm:text-[22px] font-extrabold">
+                  GET A FREE ESTIMATE & CONSULTATION.
+                </h4>
+
+                <form className="mt-4" onSubmit={handleSubmit}>
+                  <div className="space-y-4">
+                    <InputField
+                      name="name"
+                      placeholder="Name"
+                      value={formData.name}
+                      onChange={handleChange}
+                    />
+                    <InputField
+                      name="email"
+                      placeholder="Email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                    />
+                    <InputField
+                      name="phone"
+                      placeholder="Phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                    />
+                    <InputField
+                      name="zip"
+                      placeholder="Zip"
+                      value={formData.zip}
+                      onChange={handleChange}
+                    />
+                    <InputField
+                      name="service"
+                      placeholder="Choose Your Service"
+                      value={formData.service}
+                      onChange={handleChange}
+                    />
+                  </div>
+
+                  <div className="flex justify-end">
+                    <button
+                      type="submit"
+                      className="flex items-center gap-2 text-primary bg-white py-4 px-7 font-bold mt-5"
+                      disabled={loading}>
+                      {loading ? "Sending..." : "GET STARTED"}
+                    </button>
+                  </div>
+                </form>
+
+                {message && (
+                  <p className="text-white font-semibold mt-4 text-center">
+                    {message}
+                  </p>
+                )}
               </div>
             </div>
           </div>

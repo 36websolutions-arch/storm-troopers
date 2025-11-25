@@ -16,7 +16,7 @@ const servicesData: Service[] = [
       "Get a complete, professional assessment of your roof’s condition. Our experts inspect every detail—from shingles and flashing to ventilation and structural integrity—to identify hidden issues before they become costly repairs. Perfect for property owners who want peace of mind and long-term protection.",
     kicker: "WHAT WE DO",
     phone: "(614) 397-4368",
-    imageSrc: "/images/roof1.png",
+    imageSrc: "/images/roof1.svg",
   },
   {
     title: "Roof Repairs",

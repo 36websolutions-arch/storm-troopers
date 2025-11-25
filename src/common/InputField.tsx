@@ -1,8 +1,5 @@
-"use client";
-
-import React from "react";
-
 interface InputFieldProps {
+  name: string;
   type?: string;
   placeholder?: string;
   value?: string;
@@ -11,6 +8,7 @@ interface InputFieldProps {
 }
 
 export default function InputField({
+  name,
   type = "text",
   placeholder = "Type here...",
   value,
@@ -19,6 +17,7 @@ export default function InputField({
 }: InputFieldProps) {
   return (
     <input
+      name={name}
       type={type}
       placeholder={placeholder}
       value={value}
