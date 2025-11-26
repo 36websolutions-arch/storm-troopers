@@ -206,8 +206,8 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="w-full bg-[#FFEDED] max-h-[480px] px-4 py-8">
-          <div className="bg-primary p-6 rounded-md w-full max-w-full relative -top-31">
+        <div className="w-full bg-[#FFEDED] max-h-[500px] px-4 py-8">
+          <div className="bg-primary p-6 rounded-md w-full max-w-full relative -top-20">
             <h4 className="text-white text-[18px] font-extrabold text-center mb-6">
               GET A FREE ESTIMATE & CONSULTATION
             </h4>
