@@ -15,7 +15,7 @@ const data: Service[] = [
   {
     id: 2,
     title: "How Insurance Works",
-    desc: "Most storm claims cover the full roof replacement , you only pay your deductible. We handle the inspection, photos, paperwork, and the adjuster meeting Once approved, insurance pays for all necessary labor and materials. We manage the entire process from inspection to final installation.",
+    desc: "Most storm claims cover the full roof replacement , you only pay your deductible. We handle the inspection, photos, paperwork, and the adjuster meeting. Once approved, insurance pays for all necessary labor and materials. We manage the entire process from inspection to final installation.",
   },
 ];
 export default function Storm() {

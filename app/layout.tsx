@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
-import { Montserrat, Syne } from "next/font/google";
+import { Montserrat, Syne, Alex_Brush } from "next/font/google";
 import "./globals.css";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
 });
-
+const alexBrush = Alex_Brush({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-alexbrush",
+});
 const syne = Syne({
   variable: "--font-syne",
   subsets: ["latin"],
@@ -24,7 +28,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} ${syne.variable} antialiased`}>
+      <body
+        className={`${montserrat.variable} ${syne.variable} ${alexBrush.variable} antialiased`}>
         {children}
       </body>
     </html>

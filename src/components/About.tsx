@@ -23,18 +23,17 @@ export default function about() {
             </h2>
             <div className="space-y-10 mt-5">
               <p className="text-[16px] font-sans font-normal text-heading">
-                Storm Troopers delivers professional roofing and siding
-                solutions backed by deep experience in storm damage and
-                insurance claims. We document damage with precision, meet with
-                your adjuster, and secure full, accurate approval for your
-                replacement.
+                Our focus is delivering excellent work with high-quality
+                materials and craftsmanship that stands up to time and weather.
+                Every roof and siding project is installed with precision so
+                homeowners get long-term value and a result they can depend on.
               </p>
               <p className="text-[16px] font-sans font-normal text-heading">
-                You pay your deductible insurance covers the rest. Our
-                installations follow strict safety, manufacturer, and code
-                standards, ensuring durability and long-term protection. When
-                you need a contractor who understands both roofing and
-                insurance, we’re the partner you can trust.
+                We’re consistent, reliable, and easy to work with from start to
+                finish. And when a storm does cause damage, we can handle the
+                insurance claim process and guide homeowners through getting a
+                new roof approved. Our reputation comes from solid workmanship
+                and clear communication — that’s why people trust Storm Troopers
               </p>
             </div>
           </div>

@@ -2,8 +2,8 @@
 
 :root {
   --background: #ffffff;
-  --primary: #FB342F;
-  --heading:#1E1E1E
+  --primary: #fb342f;
+  --heading: #1e1e1e;
 }
 
 @theme inline {
@@ -14,6 +14,7 @@
   /* Replace old geist fonts */
   --font-sans: var(--font-montserrat);
   --font-mono: var(--font-syne);
+  --font-alexbrush: var(--font-alexbrush);
 }
 
 body {

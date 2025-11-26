@@ -15,7 +15,7 @@ const CompactFAQ = () => {
     {
       question: "What is the preferred Shingle we use?",
       answer:
-        "Most homeowners prefer asphalt shingles because they give you the best balance of price, durability, and curb appeal. They look great, handle tough weather, and don’t require much upkeep — making them a practical, worry-free choice for families.",
+        " Atlas shingles. 130 mph wind resistance that comes with  scotch guard technology to eliminate algae growth and more durable than the competition",
     },
     {
       question: "How do you find a roofing contractor you can trust?",

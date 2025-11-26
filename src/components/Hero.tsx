@@ -53,141 +53,215 @@ export default function Hero() {
 
     setLoading(false);
   };
-  return (
-    <section className="relative w-full min-h-[520px] md:h-[600px] lg:h-[837px] overflow-hidden">
-      {/* Navbar */}
-      <Navbar />
 
-      {/* Background Image */}
-      <div className="absolute inset-0 z-10">
-        <Image
-          src={HERO_IMG}
-          alt="hero"
-          width={1920}
-          height={1200}
-          className="w-full h-full object-cover"
-        />
+  return (
+    <section className="relative w-full overflow-hidden">
+      <div className="hidden md:block relative w-full min-h-[520px] md:h-[900px] lg:h-[837px] bg-[#FFEDED]">
+        <Navbar />
+        <div className="absolute inset-0 z-10">
+          <Image
+            src={HERO_IMG}
+            alt="hero"
+            width={1920}
+            height={1200}
+            className="w-full h-full object-cover"
+            priority
+          />
+        </div>
+
+        <div id="home" className="relative z-20 pt-20 px-4 sm:px-6 lg:px-6">
+          <div className="container mx-auto">
+            <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-8 items-center">
+              <div className="space-y-5">
+                <h1 className="text-white text-[18px] md:text-[40px] lg:text-[56px] font-mono font-bold leading-tight text-center md:text-start">
+                  StormTroopers Roofing — Trusted Local Roofing Professionals
+                  header
+                </h1>
+
+                <p className="lg:text-[40px] md:text-3xl sm:text-2xl text-[22px] font-normal font-alexbrush text-white leading-relaxed">
+                  Where expertise and precision are the foundation of every roof
+                </p>
+
+                <div className="grid grid-cols-2 gap-4 pt-3 max-w-md">
+                  <div className="hidden md:block">
+                    <Button />
+                  </div>
+                  <Link className="mt-4" href="tel:(614) 397-4368">
+                    <button className="flex items-center gap-2 text-heading bg-white py-4 px-7 border-2 border-heading font-bold">
+                      <FaFileInvoiceDollar /> Get A Quote
+                    </button>
+                  </Link>
+                  <div className="h-14">
+                    <Image
+                      src={"/images/rading.svg"}
+                      alt="hero logo"
+                      width={100}
+                      height={56}
+                      className="w-auto h-[87px]"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex justify-center pt-10 sm:pt-0">
+                <div className="bg-primary p-8 sm:p-10 rounded-md w-full max-w-[500px]">
+                  <h4 className="text-white text-[20px] sm:text-[22px] font-extrabold">
+                    GET A FREE ESTIMATE & CONSULTATION.
+                  </h4>
+
+                  <form className="mt-4" onSubmit={handleSubmit}>
+                    <div className="space-y-4">
+                      <InputField
+                        name="name"
+                        placeholder="Name"
+                        value={formData.name}
+                        onChange={handleChange}
+                      />
+                      <InputField
+                        name="email"
+                        placeholder="Email"
+                        type="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                      />
+                      <InputField
+                        name="phone"
+                        placeholder="Phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                      />
+                      <InputField
+                        name="zip"
+                        placeholder="Zip"
+                        value={formData.zip}
+                        onChange={handleChange}
+                      />
+                      <InputField
+                        name="service"
+                        placeholder="Choose Your Service"
+                        value={formData.service}
+                        onChange={handleChange}
+                      />
+                    </div>
+
+                    <div className="flex justify-end">
+                      <button
+                        type="submit"
+                        className="flex items-center gap-2 text-primary bg-white py-4 px-7 font-bold mt-5"
+                        disabled={loading}>
+                        {loading ? "Sending..." : "GET STARTED"}
+                      </button>
+                    </div>
+                  </form>
+
+                  {message && (
+                    <p className="text-white font-semibold mt-4 text-center">
+                      {message}
+                    </p>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* Content Overlay */}
-      <div id="home" className="relative z-20 py-10 px-4 sm:px-6 lg:px-6">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-8 items-center">
-            {/* Left text */}
-            <div className="space-y-5">
-              <h1 className="text-white text-[28px] md:text-[40px] lg:text-[56px] font-mono font-bold leading-tight">
-                StormTroopers Roofing — Trusted Local Roofing Professionals
-              </h1>
+      <div className="md:hidden relative w-full min-h-screen">
+        <div className="relative w-full h-[45vh]">
+          <Navbar />
+          <Image
+            src={HERO_IMG}
+            alt="hero"
+            fill
+            className="w-full h-full object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
 
-              <p className="text-[16px] font-medium font-sans text-white leading-relaxed">
-                At Storm Troopers, we provide reliable roofing and siding
-                services—from repairs to full installations. We also help
-                homeowners get insurance-covered roof and siding replacements,
-                where you are only responsible for your deductible and insurance
-                covers the rest.
-              </p>
+          <div className="absolute inset-0 z-10 flex flex-col pt-24 px-4 ">
+            <h1 className="text-white text-[18px] font-mono font-bold leading-tight mb-4 text-center">
+              StormTroopers Roofing — Trusted Local Roofing Professionals header
+            </h1>
 
-              <div className="flex flex-wrap gap-4 pt-3">
-                <Button />
-                <Link className="mt-4" href="tel:(614) 397-4368">
-                  <button className="flex items-center gap-2 text-heading bg-white py-4 px-7 border-2 border-heading font-bold">
-                    <FaFileInvoiceDollar /> Get A Quote
-                  </button>
-                </Link>
-              </div>
-              <div className="h-14">
+            <p className="text-[20px] font-normal font-alexbrush text-white leading-relaxed text-center">
+              Where expertise and precision are the foundation of every roof
+            </p>
+
+            <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+              <Link href="tel:(614) 397-4368">
+                <button className="flex items-center gap-2 text-heading bg-white py-3 px-6 border-2 border-heading font-bold text-sm">
+                  <FaFileInvoiceDollar /> Get A Quote
+                </button>
+              </Link>
+              <div className="h-12">
                 <Image
                   src={"/images/rading.svg"}
                   alt="hero logo"
-                  width={100}
-                  height={56}
-                  className="w-auto h-[87px]"
+                  width={80}
+                  height={48}
+                  className="w-auto h-full"
                 />
               </div>
             </div>
+          </div>
+        </div>
 
-            {/* Right Form Box */}
-            {/* <div className="flex justify-center pt-10 sm:pt-0">
-              <div className="bg-primary p-8 sm:p-10 rounded-md w-full max-w-[500px]">
-                <h4 className="text-white text-[20px] sm:text-[22px] font-sans font-extrabold">
-                  GET A FREE ESTIMATE & CONSULTATION.
-                </h4>
+        <div className="w-full bg-[#FFEDED] px-4 py-8">
+          <div className="bg-primary p-6 rounded-md w-full max-w-full relative -top-36">
+            <h4 className="text-white text-[18px] font-extrabold text-center mb-6">
+              GET A FREE ESTIMATE & CONSULTATION
+            </h4>
 
-                <form className="mt-4">
-                  <div className="space-y-4">
-                    <InputField placeholder="Name" />
-                    <InputField placeholder="Email" type="email" />
-                    <InputField placeholder="Phone" type="phone" />
-                    <InputField placeholder="Zip Code" type="zip" />
-                    <InputField placeholder="Choose Your Service" />
-                  </div>
-
-                  <div className="flex justify-end">
-                    <button className="flex items-center gap-2 text-primary bg-white py-4 px-7 font-bold mt-5">
-                      GET STARTED
-                    </button>
-                  </div>
-                </form>
+            <form className="mt-4" onSubmit={handleSubmit}>
+              <div className="space-y-4">
+                <InputField
+                  name="name"
+                  placeholder="Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+                <InputField
+                  name="email"
+                  placeholder="Email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+                <InputField
+                  name="phone"
+                  placeholder="Phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                />
+                <InputField
+                  name="zip"
+                  placeholder="Zip"
+                  value={formData.zip}
+                  onChange={handleChange}
+                />
+                <InputField
+                  name="service"
+                  placeholder="Choose Your Service"
+                  value={formData.service}
+                  onChange={handleChange}
+                />
               </div>
-            </div> */}
-            <div className="flex justify-center pt-10 sm:pt-0">
-              <div className="bg-primary p-8 sm:p-10 rounded-md w-full max-w-[500px]">
-                <h4 className="text-white text-[20px] sm:text-[22px] font-extrabold">
-                  GET A FREE ESTIMATE & CONSULTATION.
-                </h4>
 
-                <form className="mt-4" onSubmit={handleSubmit}>
-                  <div className="space-y-4">
-                    <InputField
-                      name="name"
-                      placeholder="Name"
-                      value={formData.name}
-                      onChange={handleChange}
-                    />
-                    <InputField
-                      name="email"
-                      placeholder="Email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                    />
-                    <InputField
-                      name="phone"
-                      placeholder="Phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                    />
-                    <InputField
-                      name="zip"
-                      placeholder="Zip"
-                      value={formData.zip}
-                      onChange={handleChange}
-                    />
-                    <InputField
-                      name="service"
-                      placeholder="Choose Your Service"
-                      value={formData.service}
-                      onChange={handleChange}
-                    />
-                  </div>
-
-                  <div className="flex justify-end">
-                    <button
-                      type="submit"
-                      className="flex items-center gap-2 text-primary bg-white py-4 px-7 font-bold mt-5"
-                      disabled={loading}>
-                      {loading ? "Sending..." : "GET STARTED"}
-                    </button>
-                  </div>
-                </form>
-
-                {message && (
-                  <p className="text-white font-semibold mt-4 text-center">
-                    {message}
-                  </p>
-                )}
+              <div className="flex justify-center">
+                <button
+                  type="submit"
+                  className="flex items-center gap-2 text-primary bg-white py-4 px-8 font-bold mt-6 w-full justify-center"
+                  disabled={loading}>
+                  {loading ? "Sending..." : "GET STARTED"}
+                </button>
               </div>
-            </div>
+            </form>
+
+            {message && (
+              <p className="text-white font-semibold mt-4 text-center">
+                {message}
+              </p>
+            )}
           </div>
         </div>
       </div>
