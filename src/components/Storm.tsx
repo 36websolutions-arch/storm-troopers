@@ -34,7 +34,7 @@ export default function Storm() {
           </div>
           <div className="flex flex-col items-start justify-center">
             <h5 className="text-mono lg:text-[40px] md:text-4xl sm:text-2xl text-2xl text-white font-semibold ">
-              Siding Installation
+              Storm Damage
             </h5>
             <div>
               {data.map((item, index) => (
