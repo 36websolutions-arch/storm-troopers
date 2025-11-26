@@ -17,7 +17,7 @@ export default function ServicesCard({
   imageSrc,
 }: ServicePros) {
   return (
-    <section className="lg:w-[638px] flex flex-col h-full">
+    <section className="lg:w-[638px] md:w-full flex flex-col h-full">
       {" "}
       {/* ← Added flex + full height */}
       {/* Top Image */}
@@ -31,7 +31,7 @@ export default function ServicesCard({
         />
       </div>
       {/* Bottom Text */}
-      <div className="space-y-5 shadow-xl p-8 md:min-h-[430px] sm:min-h-auto min-h-auto  flex flex-col justify-between">
+      <div className="space-y-5 shadow-xl lg:p-8 md:p-5 p-4 md:min-h-[430px] sm:min-h-auto min-h-auto  flex flex-col justify-between">
         {/* ↑ min-height makes all cards equal
         height */}
         <div>

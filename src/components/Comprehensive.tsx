@@ -50,7 +50,7 @@ export default function Comprehensive() {
       {/* Dark Background (450px height only) */}
       <div className="absolute top-0 left-0 w-full h-[450px] bg-heading z-10"></div>
 
-      <div className="relative z-20 px-6">
+      <div className="relative z-20">
         <div className="container mx-auto px-6">
           {/* Header Section */}
           <div className="max-w-4xl">
