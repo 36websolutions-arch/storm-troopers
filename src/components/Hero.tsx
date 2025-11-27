@@ -180,7 +180,7 @@ export default function Hero() {
 
           <div className="absolute inset-0 z-10 flex flex-col pt-24 px-4 ">
             <h1 className="text-white text-[18px] font-mono font-bold leading-tight mb-4 text-center">
-              StormTroopers Roofing — Trusted Local Roofing Professionals header
+              StormTroopers Roofing — Trusted Local Roofing Professionals
             </h1>
 
             <p className="text-[20px] font-normal font-alexbrush text-white leading-relaxed text-center">
