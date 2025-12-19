@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   title: "Storm Troopers",
   description: "Storm Troopers Roofing Services",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
+    icon: "/icon.png",
+    shortcut: "/icon.png",
   },
 };
 
