@@ -75,7 +75,6 @@ export default function Hero() {
               <div className="space-y-5">
                 <h1 className="text-white text-[18px] md:text-[40px] lg:text-[56px] font-mono font-bold leading-tight text-center md:text-start">
                   StormTroopers Roofing — Trusted Local Roofing Professionals
-                  header
                 </h1>
 
                 <p className="lg:text-[40px] md:text-3xl sm:text-2xl text-[22px] font-normal font-alexbrush text-white leading-relaxed">
